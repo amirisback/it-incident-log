@@ -1,25 +1,24 @@
 ## 🧠 Context
 
 - **Nama Website** Diserahkan ke Ai
-- **Objective:** Membangun website **Warung Kopi Nusantara** — Landing page kedai kopi artisan dengan online ordering.
+- **Objective:** Membangun website **Catatan Gangguan TI** Proyek Aplikasi CRUD Untuk Mencatat Gangguan TI
 - **Project Base:** Repository ini (`Init-nextjs-app`) — sudah ter-setup dengan Next.js 16, Tailwind CSS v4, TypeScript strict, Serwist PWA
 - **Target Audience:** Dewasa
 - **Tujuan Bisnis:** Menjangkau pasar, memperkenalkan produk dan brand, memudahkan pelanggan melakukan pemesanan.
 
 ## 📋 Requirements
 
-### Halaman yang dibutuhkan
-
-1. **Homepage** (`/`) — [Deskripsi konten homepage]
-2. **[Halaman 2]** (`/path`) — [Deskripsi]
-3. **[Halaman 3]** (`/path`) — [Deskripsi]
-
 ### Fitur Utama
-- [ ] 
+
+- Tampilkan list (20 data) dan halaman/modal detail.
+- Tambah, ubah, dan hapus data (wajib ada konfirmasi dialog sebelum hapus; data persisten).
+- Validasi backend: field wajib, unik, format tanggal valid, angka >=0, kategori/status valid. Munculkan error di form.
+- UI responsif (desktop & mobile).
+- Feedback state lengkap: loading, berhasil, gagal, data kosong. Input berlabel, tombol dukung navigasi keyboard.
 
 ### Desain & UI
 
-- **Style:** [Modern/Minimalis/Glassmorphism/Corporate/dll] Serahkan ke AI sesuaikan dengan Thema Website
+- **Style:** Komponen INA Digital Design System (IDDS) (design.inadigital.go.id). Wajib pakai komponen UI IDDS (bukan hanya logo/warna).
 - **Color Palette:** Serahkan ke AI sesuaikan dengan Thema Website
 - **Typography:** [Gunakan Geist (sudah setup) / font lain dari Google Fonts]
 - **Layout:** Mobile-first, responsive

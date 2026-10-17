@@ -29,7 +29,8 @@
    sebelum menulis kode apapun.
 ```
 
-### Yang harus diperhatikan:
+### Yang harus diperhatikan
+
 - **App Router ONLY** — Tidak ada `pages/` directory
 - **React 19** — Gunakan fitur terbaru (Server Components default)
 - **Metadata API** — Gunakan `export const metadata` atau `generateMetadata()`
@@ -84,7 +85,8 @@ Init-nextjs-app/
 └── package.json
 ```
 
-### Konvensi Penamaan Folder Baru:
+### Konvensi Penamaan Folder Baru
+
 - **Feature/Module** → `app/(group)/feature-name/`
 - **Components** → `app/_components/` atau co-locate
 - **Hooks** → `app/_hooks/` atau co-locate dengan feature
@@ -95,19 +97,19 @@ Init-nextjs-app/
 
 ## 4. Environment Variables
 
-### File Priority (urutan loading Next.js):
-1. `.env` — Base/common (selalu di-load)
-2. `.env.development` — Override untuk `NODE_ENV=development`
-3. `.env.production` — Override untuk `NODE_ENV=production`
-4. `.env.local` — Override tertinggi, TIDAK committed
+### File Priority (urutan loading Next.js)
 
-### Aturan Naming:
+1. `.env` — Base/common (selalu di-load)
+
+### Aturan Naming
+
 | Prefix              | Accessible di          | Contoh                          |
 | ------------------- | ---------------------- | ------------------------------- |
 | `NEXT_PUBLIC_`      | Client + Server        | `NEXT_PUBLIC_APP_URL`           |
 | Tanpa prefix        | **Server ONLY**        | `DATABASE_URL`, `AUTH_SECRET`   |
 
-### ⚠️ JANGAN PERNAH:
+### ⚠️ JANGAN PERNAH
+
 - Menyimpan secret/key di file dengan prefix `NEXT_PUBLIC_`
 - Hardcode URL atau API key langsung di source code
 - Commit `.env.local` ke git
@@ -117,6 +119,7 @@ Init-nextjs-app/
 ## 5. Coding Standards
 
 ### TypeScript
+
 - **Strict mode ON** — Tidak boleh menggunakan `any` tanpa justifikasi
 - Gunakan **interface** untuk object shapes, **type** untuk unions/intersections
 - Semua function harus memiliki return type yang eksplisit (kecuali JSX components)
@@ -131,17 +134,20 @@ import { LanguageSwitcher } from "../../../_components/language-switcher";
 ```
 
 ### React / Next.js
+
 - **Server Components** adalah default — Hanya gunakan `"use client"` jika benar-benar butuh interaktivitas (state, effects, event handlers)
 - Gunakan **`async` Server Components** untuk data fetching langsung
 - **JANGAN** gunakan `useEffect` untuk data fetching — gunakan Server Components atau Server Actions
 - Pisahkan komponen besar menjadi komponen kecil yang reusable
 
 ### Routing & State Management
+
 - **Gunakan Flat Routing + SearchParams** untuk mengalirkan ID dari halaman/segmen sebelumnya ke segmen yang lebih dalam.
 - **HINDARI Nested Dynamic Routes** (folder bertingkat terlalu dalam) untuk menjaga struktur folder tetap rata (*flat*) dan mudah dinavigasi.
 - **HINDARI Shared Layout & React Context** untuk meneruskan parameter routing antar halaman; gunakan query parameters (`searchParams`) agar data fetching tetap optimal di Server Components.
 
 ### File Naming
+
 | Tipe         | Format              | Contoh                    |
 | ------------ | ------------------- | ------------------------- |
 | Route Page   | `page.tsx`          | `app/about/page.tsx`      |
@@ -156,7 +162,8 @@ import { LanguageSwitcher } from "../../../_components/language-switcher";
 
 ## 6. Styling — Tailwind CSS v4 & Theming
 
-### Setup yang sudah ada:
+### Setup yang sudah ada
+
 - `globals.css` menggunakan `@import "tailwindcss"` (Tailwind v4 syntax)
 - `@variant dark (&:where(.dark, .dark *));` untuk class-based dark mode di Tailwind v4
 - Standard CSS variables & design tokens untuk `:root` (Light Theme) dan `.dark` (Dark Theme):
@@ -165,14 +172,18 @@ import { LanguageSwitcher } from "../../../_components/language-switcher";
 - `<ThemeProvider>` via `next-themes` (`attribute="class"`, `defaultTheme="system"`) untuk pengubahan tema tanpa FOUC
 - Komponen `ThemeSwitcher` (`src/app/_components/theme-switcher.tsx`) untuk memilih tema (Light ☀️, Dark 🌙, System 💻). **Catatan:** Kode dan fungsinya tetap dibuat, namun defaultnya di-hide / gone di UI utama sampai user meminta request show.
 
-### 🎨 Mandatory Skills untuk Styling & UI Design:
-Setiap pengerjaan UI, layout, komponen, dan styling **WAJIB** memanfaatkan & mengombinasikan skill-skill berikut:
-1. **`using-superpowers`** (`.agents/skills/using-superpowers`) — Digunakan sebelum eksekusi untuk memastikan workflow penemuan & pemanggilan skill dilakukan secara terstruktur.
-2. **`hallmark`** (`.agents/skills/hallmark`) — Anti-AI-slop design skill untuk variasi struktur UI/layout, komponen 8-state, microinteractions, responsivitas mobile-first, dan kualitas visual premium.
-3. **`ui-ux-pro-max`** (`.agents/skills/ui-ux-pro-max`) — Design intelligence & guidelines untuk pemilihan color palette, typography pairing, standar aksesibilitas (WCAG/contrast), touch targets, dan UX pre-delivery checklist.
-4. **`tailwind-design-system`** (`.agents/skills/tailwind-design-system`) — Membangun design tokens, variasi komponen, pola responsif, dan pengorganisasian Tailwind CSS v4 secara sistematis dan terstandar.
+### 🎨 Mandatory Skills untuk Styling & UI Design
 
-### Aturan:
+Setiap pengerjaan UI, layout, komponen, dan styling **WAJIB** memanfaatkan & mengombinasikan skill-skill berikut:
+
+1. **`using-superpowers`** (`.agents/skills/using-superpowers`) — Digunakan sebelum eksekusi untuk memastikan workflow penemuan & pemanggilan skill dilakukan secara terstruktur.
+2. **`ina-digital-design-system`** (`.agents/skills/ina-digital-design-system`) — Standar desain aplikasi publik/internal pemerintah (SPBE), `@idds/react`, token warna/tipografi IDDS, tema instansi, dan komponen SPBE.
+3. **`hallmark`** (`.agents/skills/hallmark`) — Anti-AI-slop design skill untuk variasi struktur UI/layout, komponen 8-state, microinteractions, responsivitas mobile-first, dan kualitas visual premium.
+4. **`ui-ux-pro-max`** (`.agents/skills/ui-ux-pro-max`) — Design intelligence & guidelines untuk pemilihan color palette, typography pairing, standar aksesibilitas (WCAG/contrast), touch targets, dan UX pre-delivery checklist.
+5. **`tailwind-design-system`** (`.agents/skills/tailwind-design-system`) — Membangun design tokens, variasi komponen, pola responsif, dan pengorganisasian Tailwind CSS v4 secara sistematis dan terstandar.
+
+### Aturan
+
 - **Gunakan Tailwind classes** — Hindari inline style
 - **Gunakan CSS variables** di `@theme inline` untuk custom values
 - **Dark mode** harus selalu di-support di semua komponen UI
@@ -198,13 +209,15 @@ Setiap pengerjaan UI, layout, komponen, dan styling **WAJIB** memanfaatkan & men
 
 ## 7. PWA (Progressive Web App)
 
-### Setup:
+### Setup
+
 - **Serwist v9.5.12** untuk Service Worker
 - `src/app/sw.ts` — Service Worker source
 - `src/app/manifest.ts` — Web App Manifest
 - PWA di-disable saat development (`next.config.ts`)
 
-### Aturan:
+### Aturan
+
 - Update `manifest.ts` jika mengubah app name, icon, atau theme
 - Jangan edit `sw.ts` kecuali butuh custom caching strategy
 - Icon PWA harus tersedia di `/public/`
@@ -214,20 +227,24 @@ Setiap pengerjaan UI, layout, komponen, dan styling **WAJIB** memanfaatkan & men
 
 ## 8. Internationalization (i18n)
 
-### Arsitektur:
+### Arsitektur
+
 Project ini menggunakan **Cookie & Localization-based i18n** tanpa meletakkan locale di URL path:
+
 - **Tanpa prefix routing (`[lang]`)** — URL tetap bersih (`/`, `/about`, `/demo-encryption`).
 - **Cookie `NEXT_LOCALE`** — Menyimpan preferensi bahasa pengguna (`id` atau `en`).
 - **`i18n-server.ts`** — Helper server-side untuk membaca cookie `NEXT_LOCALE` dan memuat dictionary terkait.
 - **`LanguageSwitcher`** — Komponen UI client untuk mengubah bahasa via Server Action `setLocaleAction()`. **Catatan:** Kode dan fungsinya tetap dibuat, namun defaultnya di-hide / gone di UI utama sampai user meminta request show.
 
-### Locales:
+### Locales
+
 | Locale | Bahasa              | Default |
 | ------ | ------------------- | ------- |
 | `id`   | 🇮🇩 Bahasa Indonesia | ✅ Ya   |
 | `en`   | 🇺🇸 English          | ❌ Tidak|
 
-### File Structure:
+### File Structure
+
 ```
 src/i18n/config.ts            # Locale list & Locale type
 src/dictionaries/id.json       # Translations (ID)
@@ -238,7 +255,8 @@ src/lib/i18n-actions.ts       # Server Action for setting locale cookie
 src/app/_components/language-switcher.tsx # UI Switcher Component
 ```
 
-### Cara Menggunakan di Server Component:
+### Cara Menggunakan di Server Component
+
 ```typescript
 import { getCurrentDictionary } from "@/lib/i18n-server";
 
@@ -249,27 +267,31 @@ export default async function Page() {
 }
 ```
 
-### Cara Menambahkan Translation Baru:
+### Cara Menambahkan Translation Baru
+
 1. Tambahkan key baru di **kedua** file: `dictionaries/id.json` dan `dictionaries/en.json`
 2. Gunakan nested object untuk grouping (misal: `nav.home`, `error.notFound`)
 3. **JANGAN** hardcode string UI — selalu gunakan dictionary
 
-### Cara Menambahkan Locale Baru:
+### Cara Menambahkan Locale Baru
+
 1. Update `i18n/config.ts` — tambahkan locale ke array `locales`
 2. Buat file `dictionaries/{locale}.json` dengan semua key yang sama
 3. Update `lib/dictionaries.ts` — tambahkan import baru
 
-### ⚠️ Aturan i18n:
+### ⚠️ Aturan i18n
+
 - **TIDAK PERLU** membuat folder `app/[lang]/`
 - **Gunakan `getCurrentDictionary()`** pada Server Components untuk mengambil `locale` dan `dict`
-- **Dictionary hanya di server** — gunakan `import "server-only"` 
+- **Dictionary hanya di server** — gunakan `import "server-only"`
 - **JANGAN** import dictionary di client component — pass translations sebagai props
 
 ---
 
 ## 9. Performance & SEO
 
-### Wajib dilakukan:
+### Wajib dilakukan
+
 - Gunakan **`next/image`** untuk semua gambar (JANGAN gunakan tag HTML `<img>` biasa)
 - Gunakan **`next/font`** untuk fonts (sudah setup Geist)
 - Set **`metadata`** di setiap `layout.tsx` / `page.tsx`
@@ -277,7 +299,8 @@ export default async function Page() {
 - Satu `<h1>` per halaman
 - **Lazy load** komponen berat dengan `dynamic()` import
 
-### Metadata Template:
+### Metadata Template
+
 ```typescript
 import type { Metadata } from "next";
 
@@ -291,14 +314,16 @@ export const metadata: Metadata = {
 
 ## 10. Git Conventions
 
-### Branch Naming:
+### Branch Naming
+
 ```
 feature/nama-fitur
 fix/deskripsi-bug
 chore/deskripsi-task
 ```
 
-### Commit Message Format:
+### Commit Message Format
+
 ```
 type(scope): description
 
@@ -308,13 +333,15 @@ chore(deps): update next.js to 16.x
 style(ui): adjust header spacing
 ```
 
-### Yang TIDAK boleh di-commit:
+### Yang TIDAK boleh di-commit
+
 - `node_modules/`
 - `.next/`
 - `.env.local`
 - File temporary / scratch
 
-### Yang BOLEH di-commit:
+### Yang BOLEH di-commit
+
 - `.env` (common, tanpa secrets)
 - `.env.development` (tanpa secrets)
 - `.env.production` (tanpa secrets — secrets via hosting platform)
@@ -354,7 +381,8 @@ style(ui): adjust header spacing
 
 ## 13. Rules untuk AI Agent
 
-### ✅ HARUS:
+### ✅ HARUS
+
 1. **Baca `AGENTS.md`** dan **`GUIDELINE.md`** sebelum menulis kode
 2. **Baca Next.js 16 docs** di `node_modules/next/dist/docs/` untuk fitur yang akan digunakan
 3. **Gunakan TypeScript strict** — no implicit any
@@ -369,9 +397,10 @@ style(ui): adjust header spacing
 12. **Gunakan Flat Routing + SearchParams** saat membutuhkan ID atau state dari halaman/segmen sebelumnya.
 13. **⚠️ WAJIB HAPUS rute demo (`app/demo-encryption/`)** saat mulai pengerjaan web riil agar rute demo ini tidak masuk ke build produksi.
 14. **Default Hide/Gone Theme & Language Switcher** — Kode dan fungsi `ThemeSwitcher` dan `LanguageSwitcher` tetap dibuat dan disiapkan, tetapi defaultnya di-hide / gone di UI utama sampai user meminta request show.
-15. **Wajib Gunakan Skills Styling** — Untuk setiap pengerjaan UI, layout, dan CSS styling, AI agent HARUS meng-invoke dan mematuhi aturan dari **`using-superpowers`**, **`hallmark`**, **`ui-ux-pro-max`**, dan **`tailwind-design-system`**.
+15. **Wajib Gunakan Skills Styling** — Untuk setiap pengerjaan UI, layout, dan CSS styling, AI agent HARUS meng-invoke dan mematuhi aturan dari **`using-superpowers`**, **`ina-digital-design-system`**, **`hallmark`**, **`ui-ux-pro-max`**, dan **`tailwind-design-system`**.
 
-### ❌ JANGAN:
+### ❌ JANGAN
+
 1. **JANGAN** menggunakan `pages/` directory
 2. **JANGAN** menggunakan API/syntax Next.js versi lama tanpa verifikasi
 3. **JANGAN** hardcode values yang seharusnya di environment variable

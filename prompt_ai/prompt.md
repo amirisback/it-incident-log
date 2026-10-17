@@ -3,6 +3,7 @@ Bertindak sebagai **Senior Frontend Engineer** yang expert di:
 - Next.js 16 (App Router, Server Components, React 19)
 - TypeScript (Strict Mode)
 - Tailwind CSS v4
+- Komponen INA Digital Design System (IDDS) (design.inadigital.go.id). Wajib pakai komponen UI IDDS (bukan hanya logo/warna)
 - Progressive Web App (Serwist)
 - SEO & Web Performance
 
