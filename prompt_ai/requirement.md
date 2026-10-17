@@ -10,6 +10,9 @@
 
 ### Fitur Utama
 
+- Pisahkan FrontEnd dan Backend
+- Backend membuat fungsi REST API Json, jadi sewaktu waktu bisa di akses untuk mobile apps
+- Frontend harus clear di larang langsung akses Database, harus lewat backend berupa REST API Json
 - Tampilkan list (20 data) dan halaman/modal detail.
 - Tambah, ubah, dan hapus data (wajib ada konfirmasi dialog sebelum hapus; data persisten).
 - Validasi backend: field wajib, unik, format tanggal valid, angka >=0, kategori/status valid. Munculkan error di form.
