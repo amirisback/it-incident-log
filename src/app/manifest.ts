@@ -1,14 +1,14 @@
-import type { MetadataRoute } from 'next'
+import type { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Amir App',
-    short_name: 'AmirApp',
-    description: 'Amir App Progressive Web App',
+    name: 'SI-GATI — Catatan Gangguan Layanan TI SPBE',
+    short_name: 'SI-GATI',
+    description: 'Portal Pencatatan & Pemantauan Insiden Gangguan Layanan TI SPBE',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',
-    theme_color: '#000000',
+    theme_color: '#BE0000',
     icons: [
       {
         src: '/icon-192x192.svg',
@@ -21,5 +21,5 @@ export default function manifest(): MetadataRoute.Manifest {
         type: 'image/svg+xml',
       },
     ],
-  }
+  };
 }

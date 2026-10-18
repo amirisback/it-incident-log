@@ -1,8 +1,11 @@
 {
   "common": {
-    "appName": "Amir App",
-    "loading": "Memuat...",
-    "error": "Terjadi kesalahan",
+    "appName": "SI-GATI",
+    "appFullName": "Sistem Informasi Gangguan Layanan TI",
+    "appTagline": "Portal Pencatatan & Pemantauan Insiden Infrastruktur & Aplikasi SPBE",
+    "nationalBanner": "INA DIGITAL | Sistem Pemerintahan Berbasis Elektronik (SPBE)",
+    "loading": "Memuat data...",
+    "error": "Terjadi kesalahan pada sistem",
     "retry": "Coba Lagi",
     "back": "Kembali",
     "next": "Selanjutnya",
@@ -10,69 +13,109 @@
     "cancel": "Batal",
     "delete": "Hapus",
     "edit": "Ubah",
-    "search": "Cari",
+    "search": "Cari tiket, judul, atau layanan...",
     "close": "Tutup",
     "yes": "Ya",
     "no": "Tidak",
     "or": "atau",
-    "and": "dan"
+    "and": "dan",
+    "all": "Semua",
+    "viewDetails": "Lihat Detail",
+    "actions": "Aksi"
   },
   "nav": {
-    "home": "Beranda",
-    "about": "Tentang",
-    "contact": "Kontak",
-    "menu": "Menu",
+    "home": "Dasbor Pemantauan",
+    "report": "Lapor Gangguan",
+    "track": "Lacak Tiket",
+    "services": "Katalog Layanan",
+    "menu": "Menu Navigasi",
     "language": "Bahasa"
   },
   "theme": {
-    "label": "Tema",
+    "label": "Tema Tampilan",
     "light": "Terang",
     "dark": "Gelap",
     "system": "Sistem"
   },
-  "home": {
-    "title": "Selamat Datang",
-    "subtitle": "Untuk memulai, edit file page.tsx.",
-    "description": "Mencari titik awal atau instruksi lebih lanjut? Kunjungi",
-    "templates": "Template",
-    "learning": "Pusat Belajar",
-    "deployNow": "Deploy Sekarang",
-    "documentation": "Dokumentasi"
-  },
   "metadata": {
-    "title": "Amir App",
-    "description": "Amir App — Aplikasi Web Progressive"
+    "title": "SI-GATI — Catatan Gangguan Layanan TI SPBE",
+    "description": "Portal resmi pencatatan, pemantauan, dan pelaporan insiden gangguan infrastruktur serta aplikasi teknologi informasi SPBE Republik Indonesia."
+  },
+  "stats": {
+    "total": "Total Insiden",
+    "critical": "Insiden Kritis",
+    "inProgress": "Sedang Ditangani",
+    "resolved": "Terselesaikan",
+    "avgRecovery": "Rata-rata Pemulihan",
+    "activeTrend": "Pemantauan 24/7 CSIRT & NOC"
+  },
+  "incident": {
+    "ticketNumber": "Nomor Tiket",
+    "title": "Judul Gangguan",
+    "description": "Deskripsi Kronologi",
+    "category": "Kategori Sistem",
+    "severity": "Tingkat Urgensi",
+    "status": "Status Penanganan",
+    "reporter": "Pelapor",
+    "reporterName": "Nama Pelapor",
+    "reporterAgency": "Unit Kerja / Instansi",
+    "affectedService": "Layanan Terdampak",
+    "downtimeMinutes": "Durasi Dampak (Menit)",
+    "reportedAt": "Waktu Pelaporan",
+    "resolvedAt": "Waktu Penyelesaian",
+    "resolutionNotes": "Catatan Tindak Lanjut Teknis",
+    "quickFilter": "Filter Cepat Kategori",
+    "filterSeverity": "Filter Urgensi",
+    "filterStatus": "Filter Status",
+    "filterCategory": "Filter Kategori",
+    "searchPlaceholder": "Cari berdasarkan no tiket, judul insiden, atau nama layanan...",
+    "createTitle": "Formulir Pelaporan Gangguan TI",
+    "createSubtitle": "Sampaikan insiden atau anomali sistem secara akurat untuk segera ditindaklanjuti oleh tim teknis NOC/CSIRT.",
+    "submitReport": "Kirim Laporan Gangguan",
+    "submitting": "Mengirim laporan...",
+    "deleteConfirmTitle": "Konfirmasi Penghapusan Insiden",
+    "deleteConfirmDesc": "Apakah Anda yakin ingin menghapus catatan insiden ini? Tindakan ini bersifat permanen dan tidak dapat dibatalkan.",
+    "deleteAction": "Ya, Hapus Data",
+    "emptyTitle": "Tidak Ada Catatan Gangguan",
+    "emptyDesc": "Tidak ditemukan data insiden yang sesuai dengan kriteria pencarian atau filter yang dipilih.",
+    "emptyAction": "Reset Filter Pencarian",
+    "detailTitle": "Detail Informasi Gangguan TI",
+    "timelineTitle": "Kronologi & Progres Penanganan"
+  },
+  "categories": {
+    "network": "Jaringan & Internet",
+    "server": "Server & Cloud PDN",
+    "webapp": "Aplikasi Web & API",
+    "database": "Basis Data",
+    "security": "Keamanan Siber",
+    "hardware": "Perangkat Keras"
+  },
+  "severities": {
+    "low": "Rendah",
+    "medium": "Sedang",
+    "high": "Tinggi",
+    "critical": "Kritis"
+  },
+  "statuses": {
+    "reported": "Terlaporkan",
+    "investigating": "Investigasi",
+    "in_progress": "Ditangani",
+    "resolved": "Selesai",
+    "closed": "Ditutup"
   },
   "error": {
     "notFound": "Halaman tidak ditemukan",
-    "notFoundDescription": "Maaf, halaman yang Anda cari tidak ada.",
+    "notFoundDescription": "Maaf, halaman atau catatan insiden yang Anda cari tidak tersedia.",
     "serverError": "Kesalahan Server",
-    "serverErrorDescription": "Terjadi kesalahan pada server. Silakan coba lagi nanti.",
-    "goHome": "Kembali ke Beranda"
+    "serverErrorDescription": "Terjadi kesalahan internal saat memproses data. Silakan coba kembali sesaat lagi.",
+    "goHome": "Kembali ke Dasbor"
   },
   "footer": {
-    "copyright": "© {year} Amir App. Semua hak dilindungi.",
-    "madeWith": "Dibuat dengan"
-  },
-  "demo": {
-    "title": "Enkripsi & Penyamaran ID",
-    "subtitle": "Keamanan tingkat tinggi & URL yang bersih untuk Next.js",
-    "intro": "Halaman ini menunjukkan implementasi dari dua teknik pengamanan ID yang telah diintegrasikan ke dalam template ini.",
-    "obfuscationTitle": "1. Penyamaran ID (Sqids)",
-    "obfuscationDesc": "Mengubah ID integer berurutan (misal dari database) menjadi string acak pendek dan ramah URL. Cocok untuk menyembunyikan ID agar tidak ditebak.",
-    "obfuscationPlaceholder": "Masukkan ID angka positif (misal: 12345)",
-    "obfuscateButton": "Samarkan ID",
-    "deobfuscateButton": "Kembalikan ID",
-    "encryptionTitle": "2. Enkripsi Kriptografis (AES-256-GCM)",
-    "encryptionDesc": "Enkripsi tingkat tinggi yang aman, terautentikasi (AES-GCM), dan anti-manipulasi. Hanya berjalan di sisi server (Server Component / Action).",
-    "encryptionPlaceholder": "Masukkan teks atau UUID sensitif",
-    "encryptButton": "Enkripsi Teks",
-    "decryptButton": "Dekripsi Teks",
-    "result": "Hasil",
-    "original": "Asli",
-    "processed": "Hasil Proses",
-    "errorInvalidNumber": "Silakan masukkan angka positif yang valid.",
-    "errorEmptyText": "Teks tidak boleh kosong.",
-    "success": "Sukses!"
+    "copyright": "© {year} SI-GATI — Layanan Terpadu Insiden SPBE Republik Indonesia.",
+    "attribution": "Dikembangkan berdasarkan Standar INA Digital Design System (IDDS).",
+    "contactSupport": "Pusat Bantuan & Kontak NOC:",
+    "emailSupport": "noc-spbe@layanan.go.id",
+    "phoneSupport": "159 (Pusat Kontak SPBE)",
+    "csirtNote": "Untuk insiden keamanan siber kritis, hubungi CSIRT Nasional segera."
   }
 }

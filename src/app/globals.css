@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "@idds/react/index.css";
+@import "@idds/styles/tailwind/css/idds.css";
+@import "@idds/styles/tailwind/css/inagov.css";
 
 @variant dark (&:where(.dark, .dark *));
 
@@ -67,6 +70,8 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+  --color-spbe-red: #BE0000;
+  --color-spbe-red-dark: #980000;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);

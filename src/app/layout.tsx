@@ -57,6 +57,7 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
+      data-brand="inagov"
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >

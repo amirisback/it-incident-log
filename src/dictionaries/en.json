@@ -1,27 +1,34 @@
 {
   "common": {
-    "appName": "Amir App",
-    "loading": "Loading...",
-    "error": "An error occurred",
-    "retry": "Retry",
+    "appName": "SI-GATI",
+    "appFullName": "IT Incident Logging Information System",
+    "appTagline": "Government Digital Services Incident Tracking & Monitoring Portal",
+    "nationalBanner": "INA DIGITAL | Electronic-Based Government System (SPBE)",
+    "loading": "Loading data...",
+    "error": "A system error occurred",
+    "retry": "Try Again",
     "back": "Back",
     "next": "Next",
     "save": "Save",
     "cancel": "Cancel",
     "delete": "Delete",
     "edit": "Edit",
-    "search": "Search",
+    "search": "Search ticket, title, or service...",
     "close": "Close",
     "yes": "Yes",
     "no": "No",
     "or": "or",
-    "and": "and"
+    "and": "and",
+    "all": "All",
+    "viewDetails": "View Details",
+    "actions": "Actions"
   },
   "nav": {
-    "home": "Home",
-    "about": "About",
-    "contact": "Contact",
-    "menu": "Menu",
+    "home": "Incident Dashboard",
+    "report": "Report Incident",
+    "track": "Track Ticket",
+    "services": "Service Catalog",
+    "menu": "Navigation Menu",
     "language": "Language"
   },
   "theme": {
@@ -30,49 +37,85 @@
     "dark": "Dark",
     "system": "System"
   },
-  "home": {
-    "title": "Welcome",
-    "subtitle": "To get started, edit the page.tsx file.",
-    "description": "Looking for a starting point or more instructions? Head over to",
-    "templates": "Templates",
-    "learning": "Learning Center",
-    "deployNow": "Deploy Now",
-    "documentation": "Documentation"
-  },
   "metadata": {
-    "title": "Amir App",
-    "description": "Amir App — Progressive Web Application"
+    "title": "SI-GATI — IT Incident Log System SPBE",
+    "description": "Official incident logging, monitoring, and reporting portal for Indonesian SPBE digital government infrastructure and public applications."
+  },
+  "stats": {
+    "total": "Total Incidents",
+    "critical": "Critical Incidents",
+    "inProgress": "In Progress",
+    "resolved": "Resolved",
+    "avgRecovery": "Avg Recovery Time",
+    "activeTrend": "24/7 CSIRT & NOC Monitoring"
+  },
+  "incident": {
+    "ticketNumber": "Ticket Number",
+    "title": "Incident Title",
+    "description": "Timeline & Description",
+    "category": "System Category",
+    "severity": "Severity Level",
+    "status": "Resolution Status",
+    "reporter": "Reporter",
+    "reporterName": "Reporter Name",
+    "reporterAgency": "Agency / Work Unit",
+    "affectedService": "Affected Service",
+    "downtimeMinutes": "Downtime (Minutes)",
+    "reportedAt": "Reported Time",
+    "resolvedAt": "Resolved Time",
+    "resolutionNotes": "Technical Resolution Notes",
+    "quickFilter": "Quick Category Filter",
+    "filterSeverity": "Filter Severity",
+    "filterStatus": "Filter Status",
+    "filterCategory": "Filter Category",
+    "searchPlaceholder": "Search by ticket ID, incident title, or service name...",
+    "createTitle": "Report New IT Incident",
+    "createSubtitle": "Submit accurate technical outage or system anomaly details for swift NOC/CSIRT escalation.",
+    "submitReport": "Submit Incident Report",
+    "submitting": "Submitting report...",
+    "deleteConfirmTitle": "Confirm Incident Deletion",
+    "deleteConfirmDesc": "Are you sure you want to delete this incident record? This action is permanent and cannot be undone.",
+    "deleteAction": "Yes, Delete Record",
+    "emptyTitle": "No Incidents Found",
+    "emptyDesc": "No incident records matched your search query or filter criteria.",
+    "emptyAction": "Reset Filters",
+    "detailTitle": "IT Incident Details",
+    "timelineTitle": "Incident Resolution Timeline"
+  },
+  "categories": {
+    "network": "Network & Internet",
+    "server": "Server & Government Cloud",
+    "webapp": "Web Applications & APIs",
+    "database": "Database Systems",
+    "security": "Cybersecurity",
+    "hardware": "Hardware Infrastructure"
+  },
+  "severities": {
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High",
+    "critical": "Critical"
+  },
+  "statuses": {
+    "reported": "Reported",
+    "investigating": "Investigating",
+    "in_progress": "In Progress",
+    "resolved": "Resolved",
+    "closed": "Closed"
   },
   "error": {
     "notFound": "Page not found",
-    "notFoundDescription": "Sorry, the page you are looking for does not exist.",
+    "notFoundDescription": "Sorry, the page or incident record you are looking for does not exist.",
     "serverError": "Server Error",
-    "serverErrorDescription": "A server error occurred. Please try again later.",
-    "goHome": "Go to Homepage"
+    "serverErrorDescription": "An internal error occurred while processing your request. Please try again later.",
+    "goHome": "Back to Dashboard"
   },
   "footer": {
-    "copyright": "© {year} Amir App. All rights reserved.",
-    "madeWith": "Made with"
-  },
-  "demo": {
-    "title": "ID Encryption & Obfuscation",
-    "subtitle": "High security & clean URLs for Next.js",
-    "intro": "This page demonstrates the implementation of two ID security techniques that have been integrated into this template.",
-    "obfuscationTitle": "1. ID Obfuscation (Sqids)",
-    "obfuscationDesc": "Converts sequential database integer IDs into short, unique, and URL-friendly strings. Perfect for hiding IDs from being guessed.",
-    "obfuscationPlaceholder": "Enter positive number ID (e.g. 12345)",
-    "obfuscateButton": "Obfuscate ID",
-    "deobfuscateButton": "Deobfuscate ID",
-    "encryptionTitle": "2. Cryptographic Encryption (AES-256-GCM)",
-    "encryptionDesc": "High-security, authenticated, and tamper-proof AES-GCM encryption. Runs exclusively on the server (Server Component / Action).",
-    "encryptionPlaceholder": "Enter sensitive text or UUID",
-    "encryptButton": "Encrypt Text",
-    "decryptButton": "Decrypt Text",
-    "result": "Result",
-    "original": "Original",
-    "processed": "Processed",
-    "errorInvalidNumber": "Please enter a valid positive number.",
-    "errorEmptyText": "Text cannot be empty.",
-    "success": "Success!"
+    "copyright": "© {year} SI-GATI — Integrated SPBE Incident Services of the Republic of Indonesia.",
+    "attribution": "Engineered according to INA Digital Design System (IDDS) Standards.",
+    "contactSupport": "Support Desk & NOC Contact:",
+    "emailSupport": "noc-spbe@layanan.go.id",
+    "phoneSupport": "159 (SPBE Contact Center)",
+    "csirtNote": "For critical cybersecurity incidents, contact National CSIRT immediately."
   }
 }
